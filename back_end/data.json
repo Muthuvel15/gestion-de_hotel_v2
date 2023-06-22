@@ -1,0 +1,41 @@
+[
+    
+    {
+      "id": 1,
+      "name": "Hôtel 1",
+      "prix": "180",
+      "ville": "New York",
+      "latitude": "40.7128",
+      "longitude": "-74.0060",
+      "image": "https://mediaim.expedia.com/destination/9/e1d3f7300985d7c45299839747925884.jpg?impolicy=fcrop&w=360&h=224&q=medium"
+    },
+    {
+      "id": 2,
+      "name": "Hôtel 2",
+      "prix": "180",
+      "ville": "New York",
+      "latitude": "40.7128",
+      "longitude": "-74.0060",
+      "image": "https://media.gettyimages.com/id/183264652/fr/photo/de-lh%C3%B4tel-de-luxe-xl.jpg?s=1024x1024&w=gi&k=20&c=NA6-C3654twDxU6u-0cxhpOlUkGPiR5nxUk-4OP3s8o=",
+      "rating": "4.7"
+    },
+    {
+      "id": 3,
+      "name": "Hôtel 3",
+      "prix": "180",
+      "ville": "New York",
+      "latitude": "40.7128",
+      "longitude": "-74.0060",
+      "image": "https://c8.alamy.com/compfr/g2fg63/le-grand-hotel-a-paris-l-architecture-francaise-monument-du-tourisme-g2fg63.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Hôtel  4",
+      "prix": "180",
+      "ville": "New York",
+      "latitude": "40.7128",
+      "longitude": "-74.0060",
+      "image": "https://media.gettyimages.com/id/157695209/fr/photo/panneau-de-lh%C3%B4tel.jpg?s=612x612&w=gi&k=20&c=cQSW3-HEmhIXEyYUB5PUOE9APcGusXEogAmEY4wCrfA=",
+      "rating": "4.7"
+    }
+  ]

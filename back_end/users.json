@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "nathan",
+      "lname": "poulain",
+      "mail": "poulain@gmail.com",
+      "pswd": "$2b$10$fs42tt.X0JP.xyFJRY/mzuus6w6ncE6RdRbHVjC2en.zrOsqprD.W",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "claudia",
+      "lname": "timoci",
+      "mail": "timoci@gmail.com",
+      "pswd": "$2b$10$ZhHFAW0I9f9s44Xel3GeR.jE/fYJjWYLMfcgQXZwNzwcPYGS..Je.",
+      "role": "client"
+    },
+    {
+      "id": 3,
+      "name": "nabila",
+      "lname": "abdali",
+      "mail": "abdali@gmail.com",
+      "pswd": "$2b$10$Y/eY5hvov7YGiNeOVnjWSuQs/Tmac47cUINeUg7eKT/RdV.MBu1Qy",
+      "role": "admin"
+    }
+  ]

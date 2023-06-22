@@ -1,40 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, Button, TextInput, FlatList } from 'react-native';
+import axios from 'axios';
 
-export default function Hotel_liste({ navigation }) {
+export default function HotelListe({ navigation }) {
   const [searchText, setSearchText] = useState('');
-  
-  // Sample hotel data
-  const hotels = [
-    {
-      id: 1,
-      name: 'Hotel A',
-      image: require('../images/hotel_1.jpg'),
-      rating: 4.5,
-      location: 'City A',
-    },
-    {
-      id: 2,
-      name: 'Hotel B',
-      image: require('../images/hotel_2.jpg'),
-      rating: 4.2,
-      location: 'City B',
-    },
-    // Add more hotel objects as needed
-  ];
+  const [hotels, setHotels] = useState([]);
+
+  useEffect(() => {
+    fetchHotels();
+  }, []);
+
+  const fetchHotels = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/hotels');
+      const data = response.data;
+      setHotels(data);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des hôtels :', error);
+    }
+  };
 
   // Filter hotels based on the search text
   const filteredHotels = hotels.filter((hotel) =>
-    hotel.location.toLowerCase().includes(searchText.toLowerCase())
+    hotel.ville.toLowerCase().includes(searchText.toLowerCase())
   );
 
   // Render each hotel item in the FlatList
   const renderHotelItem = ({ item }) => (
     <View style={styles.hotelContainer}>
       <Text style={styles.hotelName}>{item.name}</Text>
-      <Image source={item.image} style={styles.hotelImage} />
+      <Image source={{ uri: item.image }} style={styles.hotelImage} />
       <Text style={styles.hotelRating}>Rating: {item.rating}</Text>
-      <Text style={styles.hotelLocation}>Location: {item.location}</Text>
+      <Text style={styles.hotelLocation}>Location: {item.ville}</Text>
       <Button
         title="Reserve"
         onPress={() => navigation.navigate('Reservation', { hotelId: item.id })}
@@ -64,9 +61,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop : 20,
+    paddingTop: 20,
     width: '100%',
-    
   },
   searchInput: {
     width: '80%',
